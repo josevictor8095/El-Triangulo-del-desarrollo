@@ -1,1 +1,14 @@
 programador 2
+
+document.getElementById('btnSaludar').addEventListener('click', function() {
+    const nombre = document.getElementById('nombreUsuario').value;
+    const display = document.getElementById('mensaje');
+
+    if(nombre.trim() === "") {
+        display.innerText = "⚠️ Por favor, escribe algo.";
+        display.style.color = "red";
+    } else {
+        display.innerText = "¡Hola, " + nombre + "! Éxito en tu práctica de Git.";
+        display.style.color = "green";
+    }
+});
