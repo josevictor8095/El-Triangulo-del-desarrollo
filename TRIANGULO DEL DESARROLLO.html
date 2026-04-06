@@ -1,0 +1,42 @@
+HTML
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Practica de Clase de Github</title>
+    <style>
+body { font-family: sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; background: #f0f2f5; }
+        .card { background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); width: 300px; text-align: center; }
+        input { width: 90%; padding: 10px; margin: 10px 0; border: 1px solid #ccc; border-radius: 5px; }
+        button { background: #007bff; color: white; border: none; padding: 10px 20px; border-radius: 5px; cursor: pointer; transition: 0.3s; }
+        button:hover { background: #0056b3; }
+        #mensaje { margin-top: 15px; font-weight: bold; }
+
+      </style>
+</head>
+<body>
+
+    <div class="card">
+        <h2>Bienvenido</h2>
+        <p>Ingresa tu nombre para continuar</p>
+        <input type="text" id="nombreUsuario" placeholder="Escribe tu nombre...">
+        <button id="btnSaludar">Saludar</button>
+        <div id="mensaje"></div>
+    </div>
+
+    <script>
+document.getElementById('btnSaludar').addEventListener('click', function() {
+            const nombre = document.getElementById('nombreUsuario').value;
+            const display = document.getElementById('mensaje');
+            if(nombre.trim() === "") {
+                display.innerText = "⚠️ Por favor, escribe algo.";
+                display.style.color = "red";
+            } else {
+                display.innerText = "¡Hola, " + nombre + "! Éxito en tu práctica de Git.";
+                display.style.color = "green";
+            }
+        });
+
+     </script>
+</body>
+</html>
